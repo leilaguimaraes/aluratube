@@ -2,15 +2,13 @@ import React from "react";
 import config from '../config.json'
 import styled from 'styled-components'
 import Menu from '../src/components/Menu/Menu'
-import { CSSReset } from '../src/components/CSSreset'
 import { StyledTimeline } from '../src/components/Timeline'
 
 function HomePage() {
-  //console.log(config.playlists)
-  const [valorDoFiltro, setvalorDoFiltro] = React.useState("Frost");
+  const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
   return (
     <>
-      <CSSReset />
+      
       <div
         style={{
           display: 'flex',
@@ -30,6 +28,7 @@ function HomePage() {
 export default HomePage
 
 const StyledHeader = styled.div`
+  background-color: ${({theme})=> theme.backgroundLevel1};
   .profilePicture {
     width: 80px;
     height: 80px;

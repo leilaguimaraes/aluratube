@@ -10,7 +10,7 @@ Rápida descrição do objetivo de fazer esse projeto
 | :fire: Desafio     | https://www.alura.com.br/imersao-react/
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://images.unsplash.com/photo-1550745165-9bc0b…lfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80#vitrinedev)
+https://images.unsplash.com/photo-1550745165-9bc0b…lfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80#vitrinedev
 
 ## Detalhes do projeto
 

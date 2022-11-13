@@ -1,9 +1,6 @@
 import React from "react";
 import {StyledRegisterVideo} from "./styles";
 
-const isCorrectURL = ^/(http|https):\/\/(www.)?(youtube.com/watch?v=)
-
-
 
 function useForm(propsDoForm){
   const [values, setValues] = React.useState(propsDoForm.initialValues);

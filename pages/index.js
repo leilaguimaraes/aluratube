@@ -3,9 +3,37 @@ import config from '../config.json'
 import styled from 'styled-components'
 import Menu from '../src/components/Menu/Menu'
 import { StyledTimeline } from '../src/components/Timeline'
+import { videoService } from "../src/services/videoService";
+import { Favorite } from "../src/components/Menu/Favorites";
+
+
+
+
 
 function HomePage() {
+  const service = videoService();
+
   const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
+
+  const[playlists, setPlaylists] = React.useState({})
+  
+  React.useEffect(()=>{
+    service
+    .getAllVideos()
+    .then((dados)=>{
+      console.log(dados.data);
+      const novasPlaylists = {...playlists}
+      dados.data.forEach((video)=>{
+        if(!novasPlaylists[video.playlist])
+          novasPlaylists[video.playlist] = [];
+        
+        novasPlaylists[video.playlist].push(video);
+      })
+      setPlaylists(novasPlaylists);
+    });
+  }, [])
+
+
   return (
     <>
       
@@ -19,7 +47,10 @@ function HomePage() {
       >
         <Menu valorDoFiltro={valorDoFiltro} setvalorDoFiltro={setvalorDoFiltro} />
         <Header />
-        <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>Conteúdo</Timeline>
+        <Timeline searchValue={valorDoFiltro} playlists={playlists}>
+          Conteúdo
+        </Timeline>
+        <Favorite favorites = {config.favorites}/>
       </div>
     </>
   )
@@ -49,6 +80,7 @@ const StyledHeader = styled.div`
     background-position: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 0px;
   }
 `
 function Header() {

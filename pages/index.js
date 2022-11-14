@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import Menu from '../src/components/Menu/Menu'
 import { StyledTimeline } from '../src/components/Timeline'
 import { videoService } from "../src/services/videoService";
-import { Favorite } from "../src/components/Menu/Favorites";
+import { Favorite } from "../src/components/Favorites";
+import { Footer } from "../src/components/Footer";
 
 
 
@@ -51,6 +52,7 @@ function HomePage() {
           Conteúdo
         </Timeline>
         <Favorite favorites = {config.favorites}/>
+        <Footer/>
       </div>
     </>
   )

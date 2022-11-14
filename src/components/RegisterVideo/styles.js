@@ -10,7 +10,7 @@ export const StyledRegisterVideo = styled.div`
     bottom: 16px;
     right: 16px;
     border: 0;
-    background-color: red;
+    background-color: ${({ theme }) => theme.backgroundLevel1};
     border-radius: 50%;
     z-index: 99;
     cursor: pointer;

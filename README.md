@@ -14,4 +14,5 @@ Rápida descrição do objetivo de fazer esse projeto
 
 ## Detalhes do projeto
 
-Projeto realizado na imrasão react da Alura. 
+Projeto realizado na imersão react da Alura.
+Nele você pode cadastrar vídeos, prover a thumbnail que aparecerá e selecionar por categoria. Implementação de light e dark mode
